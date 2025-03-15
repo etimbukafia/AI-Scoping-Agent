@@ -1,0 +1,11 @@
+AaveDIVAWrapper is a smart contract that acts as a **connector between** **[DIVA Protocol](https://github.com/divaprotocol/diva-protocol-v1/blob/main/DOCUMENTATION.md)** **and** **[Aave V3](https://discord.com/channels/602826299974877205/636902500041228309/1251248830767169729)**, allowing assets deposited into DIVA Protocol pools to **generate yield by supplying them on Aave V3**. The generated **yield is claimable by the owner** of the AaveDIVAWrapper contract.
+
+The AaveDIVAWrapper contract was originally designed for DIVA Donate on Arbitrum, a parametric conditional donations platform, which aims to use the yield to purchase insurance policies to increase donation payouts beyond users' initial contributions. However, the contract can be utilized for any other use case enabled by DIVA Protocol (e.g., prediction markets, structured products, etc.).
+
+## Actors
+
+Actors:
+
+* **Users:** Can create pools, add/remove liquidity, redeem position tokens, and convert wrapped collateral tokens back to the original token.
+* **Owner:** Can register collateral tokens and claim yield generated from Aave deposits.
+* **Data providers/oracles:** Resolve pools by reporting the outcome via DIVA Protocol.

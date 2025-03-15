@@ -1,0 +1,41 @@
+"""
+Based solely on the provided documentation, analyze and report on:
+
+1. DOCUMENTED BEHAVIOR
+- Stated contract purpose and functionality
+- Described business logic and security model
+- Documented component interactions
+- Specified user flows and permissions
+- Defined system constraints
+
+2. SECURITY SPECIFICATIONS
+- Documented security features
+- Stated access control rules
+- Described risk mitigations
+- Emergency procedures
+- Known limitations
+
+3. SYSTEM ARCHITECTURE
+- Documented system components
+- Described integration points
+- Stated economic model
+- Listed deployment parameters
+- Configuration requirements
+
+4. IMPLICIT ELEMENTS
+- Unstated assumptions
+- Unclear specifications
+- Ambiguous behaviors
+- Documentation gaps
+
+For each section:
+- Extract only information explicitly stated in documentation
+- Highlight areas where critical information appears to be missing
+- Note ambiguous or conflicting specifications
+- Flag undefined behaviors or edge cases
+
+Skip any sections where documentation provides no information. List significant documentation gaps.
+
+"\n\n"
+"{context}"
+"""

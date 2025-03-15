@@ -1,0 +1,114 @@
+2025-03-12 00:38:46,616 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-12 00:42:28,810 - INFO - Use pytorch device_name: cpu
+2025-03-12 00:42:28,810 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-12 00:42:36,182 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-12 00:42:37,308 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-12 00:42:37,680 - INFO - Use pytorch device_name: cpu
+2025-03-12 00:42:37,680 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-12 00:42:46,098 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-12 00:42:47,192 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-12 00:42:47,303 - INFO - configs initialized
+2025-03-12 00:42:47,304 - ERROR - Error in async initialization: module 'server' has no attribute 'get_llm'
+2025-03-15 00:24:49,427 - INFO - Use pytorch device_name: cpu
+2025-03-15 00:24:49,428 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 00:24:54,524 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 00:24:55,422 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 00:24:55,474 - INFO - configs initialized
+2025-03-15 00:25:13,939 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:25:14,900 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:25:15,793 - INFO - HTTP Request: POST https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports/points/scroll "HTTP/1.1 200 OK"
+2025-03-15 00:25:48,048 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:25:48,054 - ERROR - Error in response_from_ai: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'str'>
+2025-03-15 00:29:03,614 - INFO - Use pytorch device_name: cpu
+2025-03-15 00:29:03,614 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 00:29:07,952 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 00:29:08,891 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 00:29:08,958 - INFO - configs initialized
+2025-03-15 00:29:31,895 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:31:57,780 - INFO - Use pytorch device_name: cpu
+2025-03-15 00:31:57,780 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 00:32:02,574 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 00:32:03,398 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 00:32:03,444 - INFO - configs initialized
+2025-03-15 00:32:25,634 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:34:21,634 - INFO - Use pytorch device_name: cpu
+2025-03-15 00:34:21,634 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 00:34:26,271 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 00:34:27,195 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 00:34:27,251 - INFO - configs initialized
+2025-03-15 00:34:53,311 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:34:54,924 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:34:55,857 - INFO - HTTP Request: POST https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports/points/scroll "HTTP/1.1 200 OK"
+2025-03-15 00:36:31,651 - INFO - Use pytorch device_name: cpu
+2025-03-15 00:36:31,651 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 00:36:36,410 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 00:36:37,423 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 00:36:37,487 - INFO - configs initialized
+2025-03-15 00:36:46,661 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:36:47,460 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:36:48,363 - INFO - HTTP Request: POST https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports/points/scroll "HTTP/1.1 200 OK"
+2025-03-15 00:37:11,527 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:37:11,534 - ERROR - Error in response_from_ai: Expected a Runnable, callable or dict.Instead got an unsupported type: <class 'str'>
+2025-03-15 00:40:44,808 - INFO - Use pytorch device_name: cpu
+2025-03-15 00:40:44,808 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 00:42:45,571 - ERROR - Error in async initialization: [Errno -3] Temporary failure in name resolution
+2025-03-15 00:46:02,543 - INFO - Use pytorch device_name: cpu
+2025-03-15 00:46:02,543 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 00:46:07,105 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 00:46:08,011 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 00:46:08,067 - INFO - configs initialized
+2025-03-15 00:46:23,501 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:46:24,320 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:46:25,224 - INFO - HTTP Request: POST https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports/points/scroll "HTTP/1.1 200 OK"
+2025-03-15 00:46:43,645 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:46:43,648 - ERROR - Error in response_from_ai: 'next'
+2025-03-15 00:57:19,032 - INFO - Use pytorch device_name: cpu
+2025-03-15 00:57:19,032 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 00:57:25,095 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 00:57:25,978 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 00:57:26,066 - INFO - configs initialized
+2025-03-15 00:57:43,929 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:57:44,947 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:57:45,899 - INFO - HTTP Request: POST https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports/points/scroll "HTTP/1.1 200 OK"
+2025-03-15 00:58:30,018 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 00:58:30,022 - ERROR - Error in response_from_ai: 'question'
+2025-03-15 01:04:30,867 - INFO - Use pytorch device_name: cpu
+2025-03-15 01:04:30,867 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 01:04:42,130 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 01:04:43,063 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 01:04:43,106 - INFO - configs initialized
+2025-03-15 01:05:03,204 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:05:04,495 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:05:05,491 - INFO - HTTP Request: POST https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports/points/scroll "HTTP/1.1 200 OK"
+2025-03-15 01:05:26,464 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:05:32,153 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:06:27,604 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:06:32,996 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:08:37,801 - INFO - Use pytorch device_name: cpu
+2025-03-15 01:08:37,802 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 01:08:42,857 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 01:08:43,679 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 01:08:43,777 - INFO - configs initialized
+2025-03-15 01:08:52,074 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:08:52,670 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:08:53,587 - INFO - HTTP Request: POST https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports/points/scroll "HTTP/1.1 200 OK"
+2025-03-15 01:09:33,747 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:09:37,487 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:09:49,284 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-15 01:09:49,286 - ERROR - Error in query_or_respond: Error response 400 while fetching https://api.mistral.ai/v1/chat/completions: {"object":"error","message":"Not the same number of function calls and responses","type":"invalid_request_error","param":null,"code":null}
+2025-03-15 01:09:51,793 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:10:00,567 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2025-03-15 01:10:00,569 - ERROR - Error in query_or_respond: Error response 400 while fetching https://api.mistral.ai/v1/chat/completions: {"object":"error","message":"Not the same number of function calls and responses","type":"invalid_request_error","param":null,"code":null}
+2025-03-15 01:10:00,782 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-15 01:10:00,787 - ERROR - Error in response_from_ai: Error response 429 while fetching https://api.mistral.ai/v1/chat/completions: {"message":"Requests rate limit exceeded"}
+2025-03-15 01:12:22,496 - INFO - Use pytorch device_name: cpu
+2025-03-15 01:12:22,497 - INFO - Load pretrained SentenceTransformer: all-MiniLM-L6-v2
+2025-03-15 01:12:28,617 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333 "HTTP/1.1 200 OK"
+2025-03-15 01:12:29,485 - INFO - HTTP Request: GET https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports "HTTP/1.1 200 OK"
+2025-03-15 01:12:29,562 - INFO - configs initialized
+2025-03-15 01:12:44,185 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:12:45,214 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:12:46,709 - INFO - HTTP Request: POST https://c050397a-f33b-4140-85bb-f0a4364e9f54.us-west-2-0.aws.cloud.qdrant.io:6333/collections/security_reports/points/scroll "HTTP/1.1 200 OK"
+2025-03-15 01:13:44,227 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 200 OK"
+2025-03-15 01:13:44,562 - INFO - HTTP Request: POST https://api.mistral.ai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2025-03-15 01:13:44,567 - ERROR - Error in response_from_ai: Error response 429 while fetching https://api.mistral.ai/v1/chat/completions: {"message":"Requests rate limit exceeded"}
