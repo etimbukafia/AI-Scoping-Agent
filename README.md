@@ -21,7 +21,7 @@ Retrieval Grading: Evaluates the relevance of retrieved documents before generat
 ### Clone the Repository
 
 ```
-git clone https://github.com/yourusername/scoping-agent.git
+git clone https://github.com/etimbukafia/scoping-agent.git
 cd scoping-agent
 ```
 
