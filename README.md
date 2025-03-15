@@ -15,3 +15,12 @@ Smart Routing: Determines whether to use the protocol documentation or security 
 Interactive CLI Chat: Users can ask questions through a CLI interface.
 
 Retrieval Grading: Evaluates the relevance of retrieved documents before generating answers.
+
+## Setup
+
+### Clone the Repository
+
+```
+bash git clone https://github.com/yourusername/scoping-agent.git
+cd scoping-agent
+```
