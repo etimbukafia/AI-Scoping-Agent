@@ -21,6 +21,34 @@ Retrieval Grading: Evaluates the relevance of retrieved documents before generat
 ### Clone the Repository
 
 ```
-bash git clone https://github.com/yourusername/scoping-agent.git
+git clone https://github.com/yourusername/scoping-agent.git
 cd scoping-agent
 ```
+
+### Install Dependencies
+
+Using pip:
+
+```pip install -r requirements.txt```
+
+## Usage
+
+1. Set Up Environment Variables
+Create a .env file and set up required keys:
+
+```
+QDRANT_URL=http://localhost:6333
+QDRANT_API_KEY=<your_qdrant_api_key>
+MISTRAL_API_KEY=<your_mistral_api_key>
+```
+
+2. Set Up preferred LLM and Embedding Model in the config.py file
+
+3. Run the Agent
+Start the agent and provide the path of the protocol documentation file:
+
+```
+python app.py /path/to/protocol_document.pdf
+```
+4. Ask Questions
+Once the agent initializes, you can start asking questions in the CLI:
