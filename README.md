@@ -21,7 +21,7 @@ Retrieval Grading: Evaluates the relevance of retrieved documents before generat
 ### Clone the Repository
 
 ```
-git clone https://github.com/yourusername/scoping-agent.git
+git clone https://github.com/etimbukafia/scoping-agent.git
 cd scoping-agent
 ```
 
@@ -52,3 +52,5 @@ python app.py /path/to/protocol_document.pdf
 ```
 4. Ask Questions
 Once the agent initializes, you can start asking questions in the CLI:
+
+P.S. If you encounter any issues or have any suggestions or recommendations, please feel free to contact me.
