@@ -48,7 +48,7 @@ MISTRAL_API_KEY=<your_mistral_api_key>
 Start the agent and provide the path of the protocol documentation file:
 
 ```
-python app.py /path/to/protocol_document.pdf
+python src/app.py /path/to/protocol_document.pdf
 ```
 4. Ask Questions
 Once the agent initializes, you can start asking questions in the CLI:
