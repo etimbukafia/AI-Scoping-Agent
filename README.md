@@ -2,7 +2,7 @@
 
 ## Overview
 
-Scoping Agent is an AI-powered assistant designed to help security auditors analyze and evaluate smart contract security. It integrates retrieval-augmented generation (RAG) with an LLM to provide answers using both project documentation and past security reports. The agent dynamically determines whether a question should be answered directly from the protocol documentation or if it requires retrieval from a vector database containing security audits.
+AI agent designed to help security auditors during the scoping phase of an audit process. It integrates retrieval-augmented generation (RAG) with an LLM to provide answers using both project documentation and past security reports. The agent dynamically determines whether a question should be answered directly from the protocol documentation or if it requires retrieval from a vector database containing security audits.
 
 ## Features
 
