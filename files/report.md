@@ -2,63 +2,58 @@
 
 ## Stated Contract Purpose and Functionality
 
-- The contract is designed to provide a Savings Vault for crvUSD, an ERC4626 token, allowing users to earn a "risk-free" interest rate on the crvUSD stablecoin.
-- The contract addresses the issue of scrvUSD losing its ERC4626 capabilities when bridged cross-chain by creating secondary scrvUSD markets on all chains where scrvUSD can be redeemed.
-- The contract uses an oracle to provide the rate at which the price of the asset is increasing, ensuring that the pool works as expected.
-- The contract aims to compute the growth rate in a safe (non-manipulable) and precise (no losses due to approximation) way.
+- The contract is designed to provide an oracle solution for fetching `scrvUSD` vault parameters from Ethereum and providing them on other chains.
+- The goal is to compute the growth rate in a safe and precise manner, ensuring no losses due to approximation.
+- The oracle supports creating stableswap-ng pools for other assets like `USDC/scrvUSD`, `FRAX/scrvUSD`, etc.
+
+> "This project contains a solution that fetches scrvUSD vault parameters from Ethereum, and provides them on other chains, with the goal of being able to compute the growth rate in a safe (non-manipulable) and precise (no losses due to approximation) way."
 
 ## Described Business Logic and Security Model
 
-- The contract uses an oracle to fetch scrvUSD vault parameters from Ethereum and provide them on other chains.
-- The contract introduces different versions (`v0`, `v1`, `v2`) with varying assumptions to compute the growth rate.
-  - `v0`: Replicates scrvUSD and returns the real price at some timestamp.
-  - `v1`: Assumes no further interaction with scrvUSD, rewards are distributed as is, and no new deposits/withdrawals alter the rate.
-  - `v2`: Assumes rewards denominated in crvUSD are equal across subsequent periods.
-- The contract uses a blockhash oracle with specific assumptions:
-  - It can be updated frequently with a mainnet blockhash that is no older than 30 minutes.
-  - It can rarely provide an incorrect blockhash, but not an incorrect block number.
-  - A new update with a fresh block number will correct the parameters.
+- The oracle fetches `scrvUSD` vault parameters from Ethereum and provides them on other chains.
+- The implementation includes different versions (`v0`, `v1`, `v2`) with varying assumptions about the behavior of `scrvUSD`.
+- The oracle uses a blockhash feed solution to ensure the correctness of the parameters.
+- The oracle is controlled by a DAO, allowing parameters to be changed by vote.
+
+> "Hence, the initial version named `v0` simply replicates scrvUSD and returns the real price at some timestamp. Considering the price is always growing, `v0` can be used as a lower bound. `v1` introduces the assumption that no one interacts with scrvUSD further on. This means that rewards are being distributed as is, stopping at the end of the period. And no new deposits/withdrawals alter the rate. This already gives a great assumption to the price over the distribution period, because the rate is more or less stable over a 1-week period and small declines do not matter. `v2` adds an assumption that rewards denominated in crvUSD are equal across subsequent periods."
 
 ## Documented Component Interactions
 
-- The contract interacts with the scrvUSD vault on Ethereum to fetch parameters.
-- The contract interacts with secondary scrvUSD markets on other chains.
-- The contract uses an oracle to provide the rate at which the price of the asset is increasing.
-- The contract uses a blockhash oracle to ensure the correctness of the parameters.
+- The oracle interacts with the `scrvUSD` vault on Ethereum to fetch parameters.
+- The oracle provides these parameters to other chains to compute the growth rate.
+- The oracle uses a blockhash feed solution for parameter updates.
+- The oracle supports the creation of stableswap-ng pools for various assets.
 
 ## Specified User Flows and Permissions
 
-- Users can earn a "risk-free" interest rate on the crvUSD stablecoin.
-- Users can bridge scrvUSD cross-chain, but the token loses its ERC4626 capabilities and becomes a plain ERC20 token.
-- Users can redeem scrvUSD on secondary markets.
-- The contract is controlled by a DAO, and its parameters can be changed by a vote.
+- Users can interact with the oracle to fetch `scrvUSD` vault parameters.
+- The DAO controls the oracle and can change its parameters through voting.
 
 ## Defined System Constraints
 
-- The contract assumes that the price of scrvUSD is always growing.
-- The contract assumes that the rate is more or less stable over a 1-week period and small declines do not matter.
-- The contract assumes that rewards denominated in crvUSD are equal across subsequent periods.
-- The contract assumes that the oracle provides the correct rate at which the price of the asset is increasing.
-- The contract assumes that the blockhash oracle provides a correct blockhash.
+- The oracle should not jump more than 1 bps per block.
+- The safe threshold for the oracle is 0.5 bps.
+- The upper bound of price growth is considered to be 60% APR.
+
+> "Taking the minimum pool fee as 1bps means that the oracle should not jump more than 1 bps per block. And for extra safety, take 0.5bps as a safe threshold. Therefore, we consider that scrvUSD will never be over 60% APR."
 
 # SECURITY SPECIFICATIONS
 
 ## Documented Security Features
 
-- The contract uses an oracle to provide the rate at which the price of the asset is increasing.
-- The contract uses a blockhash oracle to ensure the correctness of the parameters.
-- The contract uses smoothing to introduce sudden updates, so the price slowly catches up with the price, while the pool is being arbitraged safely.
+- The oracle uses a blockhash feed solution to ensure the correctness of the parameters.
+- The oracle includes smoothing to handle sudden updates safely.
+- The oracle is controlled by a DAO, allowing parameters to be changed by vote.
 
 ## Stated Access Control Rules
 
-- The contract is controlled by a DAO, and its parameters can be changed by a vote.
+- The DAO controls the oracle and can change its parameters through voting.
 
 ## Described Risk Mitigations
 
-- The contract uses a blockhash oracle to ensure the correctness of the parameters.
-- The contract uses smoothing to introduce sudden updates, so the price slowly catches up with the price, while the pool is being arbitraged safely.
-- The contract assumes that the oracle provides the correct rate at which the price of the asset is increasing.
-- The contract assumes that the blockhash oracle provides a correct blockhash.
+- The oracle uses a blockhash feed solution to ensure the correctness of the parameters.
+- The oracle includes smoothing to handle sudden updates safely.
+- The oracle is controlled by a DAO, allowing parameters to be changed by vote.
 
 ## Emergency Procedures
 
@@ -66,68 +61,61 @@
 
 ## Known Limitations
 
-- The contract assumes that the price of scrvUSD is always growing.
-- The contract assumes that the rate is more or less stable over a 1-week period and small declines do not matter.
-- The contract assumes that rewards denominated in crvUSD are equal across subsequent periods.
-- The contract assumes that the oracle provides the correct rate at which the price of the asset is increasing.
-- The contract assumes that the blockhash oracle provides a correct blockhash.
+- The oracle can rarely provide an incorrect blockhash, but not an incorrect block number.
+- The upper bound of price growth is considered to be 60% APR.
+
+> "It can __rarely__ provide an incorrect blockhash, but not an incorrect block number. Thus, a new update with a fresh block number will correct the parameters."
 
 # SYSTEM ARCHITECTURE
 
 ## Documented System Components
 
-- Savings Vault for crvUSD
-- Secondary scrvUSD markets
-- Oracle to provide the rate at which the price of the asset is increasing
-- Blockhash oracle to ensure the correctness of the parameters
+- The oracle fetches `scrvUSD` vault parameters from Ethereum.
+- The oracle provides these parameters to other chains.
+- The oracle uses a blockhash feed solution for parameter updates.
+- The oracle supports the creation of stableswap-ng pools for various assets.
 
 ## Described Integration Points
 
-- The contract interacts with the scrvUSD vault on Ethereum to fetch parameters.
-- The contract interacts with secondary scrvUSD markets on other chains.
-- The contract uses an oracle to provide the rate at which the price of the asset is increasing.
-- The contract uses a blockhash oracle to ensure the correctness of the parameters.
+- The oracle integrates with the `scrvUSD` vault on Ethereum.
+- The oracle integrates with other chains to provide parameters.
+- The oracle integrates with a blockhash feed solution for parameter updates.
+- The oracle integrates with stableswap-ng pools for various assets.
 
 ## Stated Economic Model
 
-- The contract allows users to earn a "risk-free" interest rate on the crvUSD stablecoin.
-- The contract uses a blockhash oracle to ensure the correctness of the parameters.
-- The contract uses smoothing to introduce sudden updates, so the price slowly catches up with the price, while the pool is being arbitraged safely.
+- The economic model is not explicitly stated.
 
 ## Listed Deployment Parameters
 
-- No deployment parameters are listed.
+- The deployment parameters are not explicitly listed.
 
 ## Configuration Requirements
 
-- The contract is controlled by a DAO, and its parameters can be changed by a vote.
+- The oracle is controlled by a DAO, allowing parameters to be changed by vote.
 
 # IMPLICIT ELEMENTS
 
 ## Unstated Assumptions
 
-- The contract assumes that the oracle provides the correct rate at which the price of the asset is increasing.
-- The contract assumes that the blockhash oracle provides a correct blockhash.
-- The contract assumes that the price of scrvUSD is always growing.
-- The contract assumes that the rate is more or less stable over a 1-week period and small declines do not matter.
-- The contract assumes that rewards denominated in crvUSD are equal across subsequent periods.
+- The oracle assumes that the `scrvUSD` price is always growing.
+- The oracle assumes that the rate is more or less stable over a 1-week period.
+- The oracle assumes that rewards denominated in `crvUSD` are equal across subsequent periods.
 
 ## Unclear Specifications
 
-- The documentation does not specify how the oracle provides the rate at which the price of the asset is increasing.
-- The documentation does not specify how the blockhash oracle ensures the correctness of the parameters.
-- The documentation does not specify how the contract handles sudden updates to the price.
+- The documentation does not clearly specify the economic model of the oracle.
+- The documentation does not clearly specify the deployment parameters of the oracle.
 
 ## Ambiguous Behaviors
 
-- The documentation does not specify how the contract handles sudden updates to the price.
-- The documentation does not specify how the contract handles incorrect blockhashes provided by the blockhash oracle.
+- The behavior of the oracle in case of an incorrect blockhash is not clearly defined.
+- The behavior of the oracle in case of a market crash is not clearly defined.
 
 ## Documentation Gaps
 
-- The documentation does not specify how the oracle provides the rate at which the price of the asset is increasing.
-- The documentation does not specify how the blockhash oracle ensures the correctness of the parameters.
-- The documentation does not specify how the contract handles sudden updates to the price.
-- The documentation does not specify how the contract handles incorrect blockhashes provided by the blockhash oracle.
-- The documentation does not specify any emergency procedures.
-- The documentation does not list any deployment parameters.
+- The documentation does not provide emergency procedures.
+- The documentation does not provide a clear economic model.
+- The documentation does not provide clear deployment parameters.
+- The documentation does not provide a clear description of the user flows and permissions for interacting with the oracle.
+- The documentation does not provide a clear description of the system constraints for the oracle.

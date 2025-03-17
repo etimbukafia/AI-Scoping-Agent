@@ -6,6 +6,7 @@ from dotenv import load_dotenv
 from mistralai import Mistral
 from langchain_qdrant import QdrantVectorStore
 from qdrant_client import QdrantClient
+import logging
 
 load_dotenv()
 
@@ -53,3 +54,9 @@ class Configs:
     
     #def get_report_collection(self):
         #return self.report_collection
+
+configs = Configs()
+
+async def initialize_configs():
+    await configs.initialize()
+    logging.info("configs initialized")

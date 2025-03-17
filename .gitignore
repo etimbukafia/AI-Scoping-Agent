@@ -1,3 +1,8 @@
 .env
 src/__pycache__/
 src/test.ipynb
+agents/
+src/agent.py
+src/db_connect.py
+src/newAgent.py
+src/server.py
